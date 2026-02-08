@@ -212,14 +212,21 @@
     display:block;
     filter: saturate(1.0) contrast(1.0);
   }
-  .fade-top, .fade-bottom{
-    position:absolute;
-    left:0; right:0;
-    height: 80px;
-    pointer-events:none;
-  }
-  .fade-top{ top:0; background: linear-gradient(to bottom, rgba(251,250,248,.92), rgba(251,250,248,0)); }
-  .fade-bottom{ bottom:0; background: linear-gradient(to top, rgba(251,250,248,.92), rgba(251,250,248,0)); }
+ .fade-top, .fade-bottom{
+  position:absolute;
+  left:0; right:0;
+  height: 80px;
+  pointer-events:none;
+}
+.fade-top{ top:0; background: linear-gradient(to bottom, rgba(251,250,248,.92), rgba(251,250,248,0)); }
+.fade-bottom{ bottom:0; background: linear-gradient(to top, rgba(251,250,248,.92), rgba(251,250,248,0)); }
+
+/* ✅ remove o degradê apenas na primeira foto (hero) */
+.hero .fade-top,
+.hero .fade-bottom{
+  display: none !important;
+}
+
 
   .quote{
     margin-top: -6px;
